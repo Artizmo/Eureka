@@ -1,0 +1,24 @@
+[Unit]
+Description=Eureka localhost AudioSocket MVP
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=eureka
+Group=eureka
+EnvironmentFile=/etc/eureka/eureka.env
+WorkingDirectory=/opt/eureka
+Environment=PYTHONPATH=/opt/eureka/src
+ExecStart=/opt/eureka/venv/bin/python -m eureka.service
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/eureka
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

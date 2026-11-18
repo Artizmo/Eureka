@@ -1,0 +1,7 @@
+{
+  "version": "1",
+  "facts": {
+    "eureka": "Eureka is an AI operator.",
+    "emergency": "For an emergency, please hang up and dial 911."
+  }
+}

@@ -1,0 +1,8 @@
+.asterisk-backups/
+.venv/
+.env
+.env.*
+!.env.example
+.phase2-test-logs/
+__pycache__/
+.pytest_cache/
